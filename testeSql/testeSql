@@ -1,0 +1,22 @@
+-- mysql -h localhost -u root -p /*conectar ao banco de dados pelo terminal*/
+
+CREATE TABLE usuarios( /*criar tabela*/
+    nome VARCHAR(50),
+    email VARCHAR(100),
+    idade INT
+
+);
+
+INSERT INTO usuarios(nome, email, idade) VALUES(
+    "Karen", 
+    "karen@email.com", 
+    15
+);
+
+CREATE DATABASE teste; /*criar database*/
+USE teste; /*escolher qual database usar*/ 
+
+SELECT * FROM usuarios;
+SELECT * FROM usuarios WHERE idade = 15;
+DELETE FROM usuarios WHERE nome = "Maria";
+UPDATE usuarios SET nome = "Joao" WHERE nome = "Luis";
